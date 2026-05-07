@@ -45,14 +45,19 @@
   function initBackToTop() {
     var backToTop = document.createElement('button');
     backToTop.className = 'back-to-top';
-    backToTop.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>';
+    backToTop.innerHTML = '';
     backToTop.title = '返回顶部';
     document.body.appendChild(backToTop);
     
-    // 滚动显示/隐藏
+    // 滚动显示/隐藏 + 更新进度
     window.addEventListener('scroll', function() {
-      if (window.pageYOffset > 300) {
+      var scrollTop = window.pageYOffset;
+      var documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+      var progress = Math.round((scrollTop / documentHeight) * 100);
+      
+      if (scrollTop > 300) {
         backToTop.classList.add('visible');
+        backToTop.textContent = progress + '%';
       } else {
         backToTop.classList.remove('visible');
       }

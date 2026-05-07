@@ -1547,34 +1547,37 @@ figure.highlight:hover .code-copy-btn {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  width: 48px;
-  height: 48px;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  width: 52px;
+  height: 52px;
+  background: var(--color-accent);
+  border: 2px solid var(--color-accent);
   border-radius: 50%;
   cursor: pointer;
-  color: var(--color-text-secondary);
-  box-shadow: var(--shadow-card);
+  color: white;
+  box-shadow: 0 4px 12px rgba(218, 119, 86, 0.4);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(20px);
-  transition: opacity 0.3s, visibility 0.3s, transform 0.3s, color 0.2s, border-color 0.2s;
+  transform: translateY(20px) scale(0.8);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s, background 0.2s, box-shadow 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 99;
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
 .back-to-top.visible {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 .back-to-top:hover {
-  color: var(--color-accent);
-  border-color: var(--color-accent);
-  box-shadow: var(--shadow-card-hover);
+  background: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  box-shadow: 0 6px 16px rgba(218, 119, 86, 0.5);
+  transform: translateY(-2px) scale(1.05);
 }
 
 /* --- Image Lightbox --- */

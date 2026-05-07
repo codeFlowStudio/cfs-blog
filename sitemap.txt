@@ -1,4 +1,5 @@
 https://codeflowstudio.github.io/cfs-blog/about/
+https://codeflowstudio.github.io/cfs-blog/sitemap/
 https://codeflowstudio.github.io/cfs-blog/2026/05/07/hello-world/
 https://codeflowstudio.github.io/cfs-blog/404
 https://codeflowstudio.github.io/cfs-blog/search/

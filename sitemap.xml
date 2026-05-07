@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://codeflowstudio.github.io/cfs-blog/sitemap/</loc>
+    
+    <lastmod>2026-05-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://codeflowstudio.github.io/cfs-blog/2026/05/07/hello-world/</loc>
     
     <lastmod>2026-05-07</lastmod>
