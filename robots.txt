@@ -1,0 +1,10 @@
+# robots.txt
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /tags/
+Allow: /categories/
+Allow: /about/
+
+Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://yourdomain.com/baidusitemap.xml

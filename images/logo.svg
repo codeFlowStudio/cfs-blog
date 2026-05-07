@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512">
+  <!-- Background rounded square -->
+  <rect x="5" y="5" width="90" height="90" rx="12" fill="#C15F3C" opacity="0.1" stroke="#C15F3C" stroke-width="2"/>
+  
+  <!-- C letter -->
+  <path fill="none" stroke="#C15F3C" stroke-width="5" stroke-linecap="round" d="M 30 35 A 10 10 0 1 0 30 65"/>
+  
+  <!-- F letter -->
+  <path fill="none" stroke="#C15F3C" stroke-width="5" stroke-linecap="round" d="M 47 35 L 47 65 M 47 35 L 58 35 M 47 50 L 56 50"/>
+  
+  <!-- S letter -->
+  <path fill="none" stroke="#C15F3C" stroke-width="5" stroke-linecap="round" d="M 76 35 C 76 35 65 35 65 43 C 65 50 76 50 76 57 C 76 65 65 65 65 65"/>
+</svg>
