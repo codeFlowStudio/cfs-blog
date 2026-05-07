@@ -11,7 +11,7 @@
   // Load search data
   function loadSearchData() {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', '/search.xml', true);
+    xhr.open('GET', '/cfs-blog/search.xml', true);
     xhr.onload = function() {
       if (xhr.status === 200) {
         parseSearchData(xhr.responseText);
