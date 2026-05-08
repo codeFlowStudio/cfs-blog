@@ -1,3 +1,5 @@
+https://codeflowstudio.github.io/cfs-blog/2026/05/05/python-data-processing/
+https://codeflowstudio.github.io/cfs-blog/2026/05/06/javascript-basics/
 https://codeflowstudio.github.io/cfs-blog/about/
 https://codeflowstudio.github.io/cfs-blog/sitemap/
 https://codeflowstudio.github.io/cfs-blog/2026/05/07/hello-world/
@@ -5,5 +7,12 @@ https://codeflowstudio.github.io/cfs-blog/404
 https://codeflowstudio.github.io/cfs-blog/search/
 https://codeflowstudio.github.io/cfs-blog
 https://codeflowstudio.github.io/cfs-blog/tags/%E4%BB%A3%E7%A0%81%E6%B5%81%E5%B7%A5%E4%BD%9C%E5%AE%A4/
+https://codeflowstudio.github.io/cfs-blog/tags/JavaScript/
+https://codeflowstudio.github.io/cfs-blog/tags/%E5%89%8D%E7%AB%AF/
+https://codeflowstudio.github.io/cfs-blog/tags/%E5%85%A5%E9%97%A8/
+https://codeflowstudio.github.io/cfs-blog/tags/Python/
+https://codeflowstudio.github.io/cfs-blog/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/
+https://codeflowstudio.github.io/cfs-blog/tags/Pandas/
 https://codeflowstudio.github.io/cfs-blog/categories/%E4%BB%A3%E7%A0%81%E6%B5%81%E5%B7%A5%E4%BD%9C%E5%AE%A4/
+https://codeflowstudio.github.io/cfs-blog/categories/%E7%BC%96%E7%A8%8B%E6%95%99%E7%A8%8B/
 https://codeflowstudio.github.io/cfs-blog/categories/%E4%BB%A3%E7%A0%81%E6%B5%81%E5%B7%A5%E4%BD%9C%E5%AE%A4/AAA/

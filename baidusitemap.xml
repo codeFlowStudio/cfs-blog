@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://codeFlowStudio.github.io/cfs-blog/cfs-blog/2026/05/05/python-data-processing/</loc>
+    <lastmod>2026-05-08</lastmod>
+  </url>
+  <url>
+    <loc>https://codeFlowStudio.github.io/cfs-blog/cfs-blog/2026/05/06/javascript-basics/</loc>
+    <lastmod>2026-05-08</lastmod>
+  </url>
+  <url>
     <loc>https://codeFlowStudio.github.io/cfs-blog/cfs-blog/2026/05/07/hello-world/</loc>
     <lastmod>2026-05-07</lastmod>
   </url>

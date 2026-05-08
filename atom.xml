@@ -30,4 +30,38 @@
     <title>Hello World</title>
     <updated>2026-05-07T09:14:23.271Z</updated>
   </entry>
+  <entry>
+    <author>
+      <name>XiaoLiang Zhan</name>
+    </author>
+    <category term="编程教程" scheme="https://codeflowstudio.github.io/cfs-blog/categories/%E7%BC%96%E7%A8%8B%E6%95%99%E7%A8%8B/"/>
+    <category term="JavaScript" scheme="https://codeflowstudio.github.io/cfs-blog/tags/JavaScript/"/>
+    <category term="前端" scheme="https://codeflowstudio.github.io/cfs-blog/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="入门" scheme="https://codeflowstudio.github.io/cfs-blog/tags/%E5%85%A5%E9%97%A8/"/>
+    <id>https://codeflowstudio.github.io/cfs-blog/2026/05/06/javascript-basics/</id>
+    <link href="https://codeflowstudio.github.io/cfs-blog/2026/05/06/javascript-basics/"/>
+    <published>2026-05-06T02:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>JavaScript 是一种轻量级、解释型的编程语言，广泛应用于网页开发。本文将介绍 JavaScript 的基础知识。</p>]]>
+    </summary>
+    <title>JavaScript 基础教程</title>
+    <updated>2026-05-08T02:23:25.179Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>XiaoLiang Zhan</name>
+    </author>
+    <category term="编程教程" scheme="https://codeflowstudio.github.io/cfs-blog/categories/%E7%BC%96%E7%A8%8B%E6%95%99%E7%A8%8B/"/>
+    <category term="Python" scheme="https://codeflowstudio.github.io/cfs-blog/tags/Python/"/>
+    <category term="数据处理" scheme="https://codeflowstudio.github.io/cfs-blog/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
+    <category term="Pandas" scheme="https://codeflowstudio.github.io/cfs-blog/tags/Pandas/"/>
+    <id>https://codeflowstudio.github.io/cfs-blog/2026/05/05/python-data-processing/</id>
+    <link href="https://codeflowstudio.github.io/cfs-blog/2026/05/05/python-data-processing/"/>
+    <published>2026-05-05T06:30:00.000Z</published>
+    <summary>
+      <![CDATA[<p>Python 是数据科学和数据分析领域最流行的编程语言之一。本文将介绍如何使用 Python 进行基本的数据处理。</p>]]>
+    </summary>
+    <title>Python 数据处理入门</title>
+    <updated>2026-05-08T02:23:51.564Z</updated>
+  </entry>
 </feed>

@@ -405,27 +405,36 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 2rem;
-  height: 2rem;
-  padding: 0 0.5rem;
-  border-radius: 4px;
+  min-width: 2.2rem;
+  height: 2.2rem;
+  padding: 0 0.6rem;
+  border-radius: 6px;
   color: var(--color-text-secondary);
-  transition: color 0.2s, background 0.2s;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  transition: all 0.2s;
 }
 
 .pagination a:hover {
   color: var(--color-accent);
-  background: var(--color-surface);
+  background: var(--color-background);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(218, 119, 86, 0.2);
 }
 
 .pagination .current {
-  color: var(--color-surface);
+  color: white;
   background: var(--color-accent);
+  border-color: var(--color-accent);
   font-weight: 600;
+  box-shadow: 0 2px 8px rgba(218, 119, 86, 0.3);
 }
 
 .pagination .space {
   color: var(--color-text-tertiary);
+  border: none;
+  background: transparent;
 }
 
 /* --- Post Detail Page --- */
@@ -1918,21 +1927,49 @@ figure.highlight:hover .code-copy-btn {
   }
 
   .site-nav {
-    display: none;
+    position: fixed;
+    top: var(--header-height);
+    right: -100%;
+    width: 280px;
+    height: calc(100vh - var(--header-height));
+    background: var(--color-surface);
     flex-direction: column;
-    width: 100%;
-    padding: 0.5rem 0 0.75rem;
+    padding: 1.5rem;
     gap: 0;
-    border-top: 1px solid var(--color-border-light);
+    border-left: 1px solid var(--color-border-light);
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    z-index: 999;
   }
 
   .site-nav.open {
-    display: flex;
+    right: 0;
   }
 
   .site-nav .nav-link {
-    padding: 0.6rem 0;
-    font-size: 0.95rem;
+    padding: 0.8rem 0;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  /* Nav overlay */
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-overlay.show {
+    display: block;
+    opacity: 1;
   }
 
   .post-title {
@@ -1958,4 +1995,71 @@ figure.highlight:hover .code-copy-btn {
   .post-nav a {
     max-width: 100%;
   }
+}
+
+/* ==========================================
+   Code Block Language Label
+   ========================================== */
+figure.highlight {
+  position: relative;
+}
+
+.code-lang-label {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  padding: 3px 10px;
+  background: rgba(218, 119, 86, 0.15);
+  color: var(--color-accent);
+  font-size: 0.65rem;
+  font-weight: 700;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ==========================================
+   External Link Icon
+   ========================================== */
+.external-link {
+  position: relative;
+  padding-right: 16px;
+}
+
+.external-link::after {
+  content: '\2197';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85em;
+  color: var(--color-text-tertiary);
+  margin-left: 3px;
+}
+
+/* ==========================================
+   Scrollable Code Block
+   ========================================== */
+.scrollable-code {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollable-code::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scrollable-code::-webkit-scrollbar-track {
+  background: var(--color-background-secondary);
+  border-radius: 3px;
+}
+
+.scrollable-code::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+.scrollable-code::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-tertiary);
 }

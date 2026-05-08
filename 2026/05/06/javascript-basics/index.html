@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  
+  <!-- SEO Meta Tags -->
+  <title>JavaScript 基础教程 | code flow studio</title>
+  <meta name="description" content="这里是Code Flow Studio,我的个人技术博客空间。写写代码、玩玩工具、记记笔记,把编程路上觉得有意思的东西都分享出来。">
+  <meta name="keywords" content="编程,技术博客,工具分享,开发经验,学习笔记">
+  <meta name="author" content="XiaoLiang Zhan">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta name="description" content="这里是Code Flow Studio,我的个人技术博客空间。写写代码、玩玩工具、记记笔记,把编程路上觉得有意思的东西都分享出来。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript 基础教程">
+<meta property="og:url" content="https://codeflowstudio.github.io/cfs-blog/2026/05/06/javascript-basics/">
+<meta property="og:site_name" content="code flow studio">
+<meta property="og:description" content="这里是Code Flow Studio,我的个人技术博客空间。写写代码、玩玩工具、记记笔记,把编程路上觉得有意思的东西都分享出来。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://codeflowstudio.github.io/images/logo.svg">
+<meta property="article:published_time" content="2026-05-06T02:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-08T02:23:25.179Z">
+<meta property="article:author" content="XiaoLiang Zhan">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="入门">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://codeflowstudio.github.io/images/logo.svg">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JavaScript 基础教程">
+  <meta name="twitter:description" content="这里是Code Flow Studio,我的个人技术博客空间。写写代码、玩玩工具、记记笔记,把编程路上觉得有意思的东西都分享出来。">
+  <meta name="twitter:image" content="/cfs-blog/images/logo.svg">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://codeflowstudio.github.io/cfs-blog/2026/05/06/javascript-basics/">
+  
+  <link rel="icon" href="/cfs-blog/images/logo.svg">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-gb-web@latest/lxgwwenkaigb-regular/result.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-gb-web@latest/lxgwwenkaigb-medium/result.css">
+  
+<link rel="stylesheet" href="/cfs-blog/css/style.css">
+
+  
+  <!-- Structured Data (JSON-LD) -->
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "JavaScript 基础教程",
+    "description": "这里是Code Flow Studio,我的个人技术博客空间。写写代码、玩玩工具、记记笔记,把编程路上觉得有意思的东西都分享出来。",
+    "author": {
+      "@type": "Person",
+      "name": "XiaoLiang Zhan"
+    },
+    "datePublished": "2026-05-06T02:00:00.000Z",
+    "dateModified": "2026-05-08T02:23:25.179Z",
+    "url": "https://codeflowstudio.github.io/cfs-blog/2026/05/06/javascript-basics/",
+    "image": "/cfs-blog/images/logo.svg"
+  }
+  </script>
+  
+<meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/cfs-blog/atom.xml" title="code flow studio" type="application/atom+xml">
+</head>
+
+<body>
+  <!-- SVG Icons Sprite -->
+  <svg style="display: none;">
+    <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+      <polyline points="9 22 9 12 15 12 15 22"></polyline>
+    </symbol>
+    <symbol id="icon-archives" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
+      <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+    </symbol>
+    <symbol id="icon-tags" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+      <line x1="7" y1="7" x2="7.01" y2="7"></line>
+    </symbol>
+    <symbol id="icon-categories" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+    </symbol>
+    <symbol id="icon-about" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="12" y1="16" x2="12" y2="12"></line>
+      <line x1="12" y1="8" x2="12.01" y2="8"></line>
+    </symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </symbol>
+    <symbol id="icon-rss" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 11a9 9 0 0 1 9 9"></path>
+      <path d="M4 4a16 16 0 0 1 16 16"></path>
+      <circle cx="5" cy="19" r="1"></circle>
+    </symbol>
+    <symbol id="icon-sitemap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+      <path d="M2 17l10 5 10-5"></path>
+      <path d="M2 12l10 5 10-5"></path>
+    </symbol>
+  </svg>
+
+  <div class="site-wrapper">
+    <header class="site-header">
+  <div class="header-inner">
+    <a class="site-title" href="/cfs-blog/"><img class="site-logo" src="/cfs-blog/images/logo.svg" alt="Logo">code flow studio</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="nav-toggle-icon"></span>
+    </button>
+    <nav class="site-nav" id="siteNav">
+      
+        
+        
+        
+        <a class="nav-link" href="/cfs-blog/">
+          
+            <svg class="nav-icon" aria-hidden="true">
+              <use href="#icon-home"></use>
+            </svg>
+          
+          <span>Home</span>
+        </a>
+      
+        
+        
+        
+        <a class="nav-link" href="/cfs-blog/archives">
+          
+          <span>Archives</span>
+        </a>
+      
+        
+        
+        
+        <a class="nav-link" href="/cfs-blog/tags">
+          
+          <span>Tags</span>
+        </a>
+      
+        
+        
+        
+        <a class="nav-link" href="/cfs-blog/categories">
+          
+          <span>Categories</span>
+        </a>
+      
+        
+        
+        
+        <a class="nav-link" href="/cfs-blog/about">
+          
+          <span>About</span>
+        </a>
+      
+        
+        
+        
+        <a class="nav-link" href="/cfs-blog/search">
+          
+            <svg class="nav-icon" aria-hidden="true">
+              <use href="#icon-search"></use>
+            </svg>
+          
+          <span>Search</span>
+        </a>
+      
+    </nav>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+    <main class="main-content">
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">JavaScript 基础教程</h1>
+    <div class="post-meta">
+      <time datetime="2026-05-06T02:00:00.000Z">2026-05-06</time>
+      
+        <span class="separator">&middot;</span>
+        
+          <a href="/cfs-blog/categories/%E7%BC%96%E7%A8%8B%E6%95%99%E7%A8%8B/">编程教程</a>
+        
+      
+    </div>
+  </header>
+
+  <div class="post-body-wrapper">
+    <div class="post-content">
+      <p>JavaScript 是一种轻量级、解释型的编程语言，广泛应用于网页开发。本文将介绍 JavaScript 的基础知识。</p>
+<span id="more"></span>
+
+<h2 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h2><p>在 JavaScript 中，我们可以使用 <code>var</code>、<code>let</code> 和 <code>const</code> 来声明变量：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 var 声明（函数作用域）</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">&quot;张三&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 let 声明（块级作用域）</span></span><br><span class="line"><span class="keyword">let</span> age = <span class="number">25</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 const 声明常量</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">PI</span> = <span class="number">3.14159</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`姓名：<span class="subst">$&#123;name&#125;</span>，年龄：<span class="subst">$&#123;age&#125;</span>`</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h2><p>JavaScript 支持多种函数定义方式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函数声明</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">greet</span>(<span class="params">name</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">`你好，<span class="subst">$&#123;name&#125;</span>！`</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 箭头函数</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">add</span> = (<span class="params">a, b</span>) =&gt; a + b;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数表达式</span></span><br><span class="line"><span class="keyword">const</span> multiply = <span class="keyword">function</span>(<span class="params">x, y</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> x * y;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">greet</span>(<span class="string">&quot;李四&quot;</span>));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">add</span>(<span class="number">5</span>, <span class="number">3</span>));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">multiply</span>(<span class="number">4</span>, <span class="number">6</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="数组操作"><a href="#数组操作" class="headerlink" title="数组操作"></a>数组操作</h2><p>数组是 JavaScript 中常用的数据结构：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruits = [<span class="string">&quot;苹果&quot;</span>, <span class="string">&quot;香蕉&quot;</span>, <span class="string">&quot;橙子&quot;</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加元素</span></span><br><span class="line">fruits.<span class="title function_">push</span>(<span class="string">&quot;葡萄&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 遍历数组</span></span><br><span class="line">fruits.<span class="title function_">forEach</span>(<span class="function">(<span class="params">fruit, index</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`<span class="subst">$&#123;index + <span class="number">1</span>&#125;</span>. <span class="subst">$&#123;fruit&#125;</span>`</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 数组映射</span></span><br><span class="line"><span class="keyword">const</span> upperFruits = fruits.<span class="title function_">map</span>(<span class="function"><span class="params">fruit</span> =&gt;</span> fruit.<span class="title function_">toUpperCase</span>());</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(upperFruits);</span><br></pre></td></tr></table></figure>
+
+<h2 id="对象操作"><a href="#对象操作" class="headerlink" title="对象操作"></a>对象操作</h2><p>JavaScript 对象用于存储键值对：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> user = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;王五&quot;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">30</span>,</span><br><span class="line">  <span class="attr">email</span>: <span class="string">&quot;wangwu@example.com&quot;</span>,</span><br><span class="line">  <span class="title function_">greet</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`你好，我是<span class="subst">$&#123;<span class="variable language_">this</span>.name&#125;</span>`</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 访问属性</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(user.<span class="property">name</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(user[<span class="string">&quot;age&quot;</span>]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加新属性</span></span><br><span class="line">user.<span class="property">city</span> = <span class="string">&quot;北京&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 遍历对象</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> user) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`<span class="subst">$&#123;key&#125;</span>: <span class="subst">$&#123;user[key]&#125;</span>`</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="异步编程"><a href="#异步编程" class="headerlink" title="异步编程"></a>异步编程</h2><p>JavaScript 支持 Promise 和 async&#x2F;await 处理异步操作：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Promise 示例</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fetchData</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="title function_">resolve</span>(<span class="string">&quot;数据加载成功&quot;</span>);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// async/await 示例</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">loadData</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> data = <span class="keyword">await</span> <span class="title function_">fetchData</span>();</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(data);</span><br><span class="line">  &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&quot;加载失败:&quot;</span>, error);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">loadData</span>();</span><br></pre></td></tr></table></figure>
+
+<h2 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h2><p>如果你想深入学习 JavaScript，可以参考以下资源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript">MDN JavaScript 文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.javascript.info/">JavaScript.info</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/js/js-tutorial.html">菜鸟教程</a></li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>JavaScript 是一门功能强大的语言，掌握基础知识是迈向高级开发的第一步。继续练习，你会越来越熟练！</p>
+
+    </div>
+
+    
+        <aside class="toc-sidebar">
+  <div class="toc-wrapper">
+    <h3 class="toc-title">Contents</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E"><span class="toc-text">变量声明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89"><span class="toc-text">函数定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C"><span class="toc-text">数组操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E6%93%8D%E4%BD%9C"><span class="toc-text">对象操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B"><span class="toc-text">异步编程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90"><span class="toc-text">学习资源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+  </div>
+</aside>
+
+      
+  </div>
+
+  <footer class="post-footer">
+    
+      <div class="post-tags">
+        
+          <a href="/cfs-blog/tags/JavaScript/">#JavaScript</a>
+        
+          <a href="/cfs-blog/tags/%E5%89%8D%E7%AB%AF/">#前端</a>
+        
+          <a href="/cfs-blog/tags/%E5%85%A5%E9%97%A8/">#入门</a>
+        
+      </div>
+    
+    
+    
+    
+    
+      <div class="post-copyright">
+        <div class="copyright-header">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z"/></svg>
+          <span>版权声明</span>
+        </div>
+        <div class="copyright-content">
+          <p><strong>本文作者：</strong>XiaoLiang Zhan</p>
+          <p><strong>本文链接：</strong><a href="https://codeflowstudio.github.io/cfs-blog/2026/05/06/javascript-basics/">https://codeflowstudio.github.io/cfs-blog/2026/05/06/javascript-basics/</a></p>
+          <p><strong>发布时间：</strong>2026-05-06 10:00:00</p>
+          <p><strong>最后更新：</strong>2026-05-08 10:23:25</p>
+          <p class="copyright-notice">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</p>
+        </div>
+      </div>
+    
+    
+    <nav class="post-nav">
+      
+        <a class="prev" href="/cfs-blog/2026/05/07/hello-world/">&laquo; Hello World</a>
+      
+      
+        <a class="next" href="/cfs-blog/2026/05/05/python-data-processing/">Python 数据处理入门 &raquo;</a>
+      
+    </nav>
+  </footer>
+</article>
+
+
+<script src="/cfs-blog/js/code-external-enhancements.js"></script>
+
+
+    </main>
+    <footer class="site-footer">
+  <div class="footer-inner">
+    
+      <p>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</p>
+    
+    <p>Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &middot; Theme <a href="https://github.com/codeFlowStudio/hexo-theme-warmpaper" target="_blank" rel="noopener">Warmpaper</a></p>
+  </div>
+</footer>
+
+  </div>
+  
+<script src="/cfs-blog/js/main.js"></script>
+
+  
+<script src="/cfs-blog/js/enhancements.js"></script>
+
+</body>
+</html>
