@@ -2041,3 +2041,36 @@ figure.highlight:hover .code-copy-btn {
 .scrollable-code::-webkit-scrollbar-thumb:hover {
   background: var(--color-text-tertiary);
 }
+
+/* ==========================================
+   Giscus Comments
+   ========================================== */
+.post-comments {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--color-border);
+}
+
+.comments-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#giscus-comments {
+  margin-top: 20px;
+}
+
+/* Giscus iframe 样式优化 */
+.giscus {
+  width: 100%;
+}
+
+.giscus iframe {
+  border: none;
+  border-radius: var(--radius);
+}
