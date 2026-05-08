@@ -1998,28 +1998,6 @@ figure.highlight:hover .code-copy-btn {
 }
 
 /* ==========================================
-   Code Block Language Label
-   ========================================== */
-figure.highlight {
-  position: relative;
-}
-
-.code-lang-label {
-  position: absolute;
-  top: 12px;
-  left: 16px;
-  padding: 3px 10px;
-  background: rgba(218, 119, 86, 0.15);
-  color: var(--color-accent);
-  font-size: 0.65rem;
-  font-weight: 700;
-  border-radius: 4px;
-  letter-spacing: 1px;
-  pointer-events: none;
-  z-index: 10;
-}
-
-/* ==========================================
    External Link Icon
    ========================================== */
 .external-link {
